@@ -1,49 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
-  <title>Nachricht hinterlassen</title>
-</head>
-<body>
-  <header>
-    <h1>Hallo! Schön, dass du hier bist!</h1>
-    <p>Ich bin gerade beschäftigt, aber hinterlasse mir doch gerne eine Nachricht!</p>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Nachricht hinterlassen</title>
+  </head>
+  <body>
+    <div class="layout">
+      <header>
+        <h1>Hallo! Schön, dass du hier bist!</h1>
+        <p>
+          Ich bin gerade beschäftigt, aber hinterlasse mir doch gerne eine
+          Nachricht!
+        </p>
+      </header>
 
-  <main>
-    <form id="message-form" action="#" method="post">
-      <label for="message">Deine Nachricht</label>
-      <textarea
-        id="message"
-        name="message"
-        rows="6"
-        placeholder="Trag' hier deine Nachricht für mich ein!"
-        required
-      ></textarea>
+      <main>
+        <form id="message-form" action="#" method="post">
+          <label for="message">Deine Nachricht</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            placeholder="Trag' hier deine Nachricht für mich ein!"
+            required
+          ></textarea>
 
-      <label for="name">Dein Name</label>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        placeholder="Trag' hier noch deinen Namen ein!"
-        required
-      />
+          <label for="name">Dein Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Trag' hier noch deinen Namen ein!"
+            required
+          />
 
-      <button type="submit">Nachricht absenden</button>
-    </form>
+          <button type="submit">Nachricht absenden</button>
+        </form>
 
-    <section aria-labelledby="messages-heading">
-      <h2 id="messages-heading">Diese Nachrichten wurden bereits für mich hinterlassen:</h2>
-      <ul id="message-list">
-        <!-- Nachrichten kommen später per JavaScript aus Supabase hier rein -->
-      </ul>
-    </section>
-  </main>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="config.js"></script>
-  <script src="app.js"></script>
-</body>
+        <section aria-labelledby="messages-heading">
+          <h2 id="messages-heading">
+            Diese Nachrichten wurden bereits für mich hinterlassen:
+          </h2>
+          <ul id="message-list">
+            <!-- Nachrichten kommen später per JavaScript aus Supabase hier rein -->
+          </ul>
+        </section>
+      </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
